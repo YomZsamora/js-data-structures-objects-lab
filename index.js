@@ -13,7 +13,13 @@ let destructivelyUpdateDriverWithKeyAndValue = (driverObject, key, value) => {
 
 // Deletes `key` from a clone of driver and returns the new driver. Does not modify the original driver (it is non-destructive).
 let deleteFromDriverByKey = (driverObject, key) => {
-   let newDriver = Object.assign({}, key);
+   let newDriver = Object.assign({}, driverObject);
    delete newDriver[key];
    return newDriver;
+}
+
+// Modifies the original driver object by return driver object with the key/value pair
+let destructivelyDeleteFromDriverByKey = (driverObject, key) => {
+   delete driverObject[key]
+   return driverObject
 }
