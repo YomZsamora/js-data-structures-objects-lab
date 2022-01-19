@@ -5,3 +5,8 @@ const driver = {};
 let updateDriverWithKeyAndValue = (driverObject, key, value) => {
    return Object.assign({}, driverObject, { [key]: value })
 }
+
+// Function mutates the driver parameter passed in. Updates `driver` with the given `key` and `value` (it is destructive).
+let destructivelyUpdateDriverWithKeyAndValue = (driverObject, key, value) => {
+   return Object.assign(driverObject, { [key]: value })
+}
